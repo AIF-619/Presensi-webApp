@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Presensi Asisten</title>
+</head>
+
+<body onload="initClock()">
+    <header>
+        <h2 class="logo">ICT</h2>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="Presensi_Asisten.html">Presensi Asisten</a></li>
+                <li><a href="../Calas/Presensi_Calas.html">Presensi CALAS</a></li>
+            </ul>
+        </nav>
+        <a href="a" class="cta"><button>Admin</button></a>
+    </header>
+    <main>
+        <div class="digital_clock">
+            <div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div>
+            </div>
+        </div>
+        <div class="name_list">
+            <div class="table">
+                <section class="table_header">
+                    <h1>Asisten</h1>
+                </section>
+                <section class="table_body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> NIM </th>
+                                <th> Nama </th>
+                                <th> Angkatan </th>
+                                <th id="status"> Status </th>
+                                <th id="absen"> Absen </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 1 </td>
+                                <td> Kelvin </td>
+                                <td> 2021 </td>
+                                <td> <p class="status hadir">Hadir</p></td>
+                                <td><button class="presensi">Presensi</button></td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> Nabil </td>
+                                <td> 2021 </td>
+                                <td> <p class="status absent">Absent</p> </td>
+                                <td><button class="presensi">Presensi</button></td>
+                            </tr>
+                            <tr>
+                                <td> 3 </td>
+                                <td> Aris </td>
+                                <td> 2022 </td>
+                                <td> <p class="status hadir">Hadir</p></td>
+                                <td><button class="presensi">Presensi</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+        
+    </main>
+
+    <script type="text/javascript">
+        function updateClock() {
+            var now = new Date();
+            var dname = now.getDay(),
+                mo = now.getMonth(),
+                dnum = now.getDate(),
+                yr = now.getFullYear(),
+                hou = now.getHours(),
+                min = now.getMinutes(),
+                sec = now.getSeconds()
+                pe = "AM";
+
+            Number.prototype.pad = function(digits) {
+                for(var n = this.toString(); n.length < digits; n = 0 + n );
+                return n;
+            }
+
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Desember"];
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+            var values = [week[dname], months[mo], dnum.pad(2), yr.pad(2), hou.pad(2), min.pad(2), sec.pad(2)];
+            for(var i = 0; i < ids.length; i++)
+            document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+
+        }
+
+        function initClock() {
+            updateClock();
+            window.setInterval("updateClock()", 1)
+        }
+    </script>
+</body>
+
+</html>
