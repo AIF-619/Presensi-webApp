@@ -1,0 +1,124 @@
+* {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #545353;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.wrapper {
+    width: 420px;
+    background: #fff;
+   
+    color: #5a5959;
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    color: #342e2e;
+    margin: 30px 0;
+}
+
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border: 2px solid rgb(51, 60, 60);
+border-radius: 40px;
+font-size: 16px;
+color: #4e4646;
+padding: 20px 25px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(12, 180, 180);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 650;
+    color: #fff;
+}
+
+.register-link p a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.btn a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bx {
+    color: #342e2e;
+}
+
+.table-1 {
+    background: #fff;
+}
+
+input[type="text"]::placeholder {
+    color: #999; /* Warna placeholder */
+}
+
+input[type="text"] {
+    color: #333; /* Warna teks input */
+}
+
+input[type='Password']::placeholder {
+    color: #999;
+}
+
+input[type="Password"]::placeholder {
+    color: #999;
+}
